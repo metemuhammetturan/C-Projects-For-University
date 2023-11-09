@@ -15,9 +15,6 @@
  - Aralıktaki asal sayılar nasıl bulunabilir? : Aralık belirli olduğu takdirde!! aralıktaki sayılardan sadece kednine ve 1'e bölünenler asal sayı
  olarak nitelendirilecektir.
  
- - Bunu nasıl yapabiliriz?
- - a%b a'nın b ye bölümünden kalanını veriyor.
- 
 */
 
 
@@ -25,28 +22,28 @@
 #include <stdio.h>
 
 
-int main() {
+int main(void) {
    
     int sayi1, sayi2;
     int i,b;
-    int asalSayiAdet = 0;
-    int asalSayiToplam = 0;
+    double asalSayiAdet = 0;
+    double asalSayiToplam = 0;
     
-    printf("---- Iki Sayi Arasindaki Asal Sayilarin Hesaplanmasi ---- \n");
+    printf("---- Iki Sayi Arasindaki Asal Sayilarin Hesaplanmasi ve Ortalamalarinin Bulunmasi ---- \n");
     
     
     
     printf("1. Sayiyi Giriniz: ");
     scanf("%d", &sayi1);
-    // 1. degerin kullanıcı tarafından sisteme tanımlanması.
-    
+    // 1. degerin kullanici tarafindan sisteme tanımlanması.
+
     printf("2. Sayiyi Giriniz: ");
     scanf("%d", &sayi2);
-    // 2. degerin kullanıcı tarafından sisteme tanımlanması.
-    
+    // 2. degerin kullanici tarafindan sisteme tanımlanması.
+
     
         
-    // ARALIKTAKİ ASALLARIN LİSTELENMESİ
+    // ARALIKTAKI ASALLARIN LISTELENMESI ve ORTALAMALARININ BULUNMASI
     
     for(i=sayi1; i<=sayi2; i++)
         {
@@ -62,25 +59,15 @@ int main() {
             }
             
             
-            if (asalKontrol==1) {
-                
+            if (asalKontrol==1) 
+            {
                 printf("%d\n", i);
                 asalSayiAdet++;
                 asalSayiToplam += i;
             }
         }
     
-    printf("Aralıktaki Asal Sayıların Ortalaması: %d", asalSayiToplam/asalSayiAdet);
-    
-    // ARALIKTAKİ ASALLARIN ORTALAMASININ ALINMASI
-    
-    /*
-     
-     Ortalama Almak : VERİLERİN TOPLAMI / VERİ ADEDİ
-     
-     VERİLERİN TOPLAMI Nasıl Bulunur?: For döngüsünde alınan sonuçlar
-     
-     */
+    printf("Araliktaki Asal Sayiların Ortalamasi: %f\n", asalSayiToplam/asalSayiAdet);
     
     
     
