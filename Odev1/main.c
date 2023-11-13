@@ -46,22 +46,30 @@ int main(void) {
     
     
     
-    baslangic:                               // Hesaplama isleminin baslangicinin yapildigi yer.
     
     
     printf("---- Iki Sayi Arasindaki Asal Sayilarin Hesaplanmasi ve Ortalamalarinin Bulunmasi ---- \n");
     
-    
+    baslangic:                               // Hesaplama isleminin baslangicinin yapildigi yer
     
     printf("Kucuk Olan 1. Sayiyi Giriniz: ");
-    scanf("%d", &sayi1);
+    if (scanf("%d", &sayi1) != 1) {
+        printf("Hatali giris! Lutfen bir integer deger girin.\n");
+        fflush(stdin);
+        goto baslangic;
+        }
+    
     // Kucuk olan 1. degerin kullanici tarafindan sisteme tanımlanması.
 
     printf("Buyuk Olan 2. Sayiyi Giriniz: ");
-    scanf("%d", &sayi2);
+    if (scanf("%d", &sayi2) != 1) {
+        printf("Hatali giris! Lutfen bir integer deger girin.\n");
+        fflush(stdin);
+        goto baslangic;
+        } // Kullanicinin girdigi deger integer haricinde bir veri tipinde oldugu takdirde sistem tarafindan uyari verilmesi.
     // Buyuk olan 2. degerin kullanici tarafindan sisteme tanımlanması.
 
-    
+
         
     // ARALIKTAKI ASALLARIN LISTELENMESI ve ORTALAMALARININ BULUNMASI
     
@@ -99,10 +107,12 @@ int main(void) {
             }
         }
     
-    printf("Araliktaki Asal Sayiların Ortalamasi: %f\n", asalSayiToplam/asalSayiAdet); // Asal sayilarin ortalamasinin cikti olarak cikarilmasi.
-    
-    
-    
+    if(asalSayiAdet == 0) {
+        printf("Bu Aralikta Herhangi Bir Asal Sayi Yoktur.\n");
+    } else
+        {
+            printf("Araliktaki Asal Sayiların Ortalamasi: %f\n", asalSayiToplam/asalSayiAdet); // Asal sayilarin ortalamasinin cikti olarak cikarilmasi.
+        }
     
     return 0;
 }
