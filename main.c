@@ -11,6 +11,8 @@
 
 int main(void)
 {
+
+    printf(" ---- Sayi Tahmin Oyunu ---- ");
     
     int kullaniciTahmini, tahminAdedi = 1, rastgeleSayi, tahminDurum = 0;
     
