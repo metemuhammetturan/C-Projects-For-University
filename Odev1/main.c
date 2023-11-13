@@ -21,13 +21,11 @@
  
 DEGISKENLERIN ANLAMLARI
  
- sayi1:
- sayi2:
- i:
- b:
- asalSayiAdet:
- asalSayiToplam:
- asalKontrol:
+ sayi1: Kullanicinin girdigi ilk deger
+ sayi2: Kullanicinin girdigi ikinci deger
+ asalSayiAdet: Bulunan asal sayilarin ortalamasinin hesaplanmasinda kullanilacak asal sayilarin adedini gosteren integer
+ asalSayiToplam: Bulunan asal sayilarin ortalamasinin hesaplanmasinda kullanilacak asal sayilarin toplamini gosteren integer
+ asalKontrol: for dongusunun her bir adimindaki sayinin asal olup olmadigini kontrol eden integer
  
  
  */
